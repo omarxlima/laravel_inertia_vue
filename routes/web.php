@@ -7,9 +7,9 @@ Route::get('/', function () {
     return Inertia::render('Home');
 });
 
-// Route::get('/about', function () {
-//     return Inertia::render('About', ['user' => 'Marx']);
-// });
+Route::get('/about', function () {
+    return Inertia::render('About', ['user' => 'Marx']);
+});
 
-Route::inertia('about', 'About', ['user' => 'Karl']);
+// Route::inertia('about', 'About', ['user' => 'Karl']);
 

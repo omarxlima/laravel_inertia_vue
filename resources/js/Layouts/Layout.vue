@@ -3,7 +3,7 @@
         <header>
             <nav>
 
-                <div>
+                <div class="container mx-auto">
                     <a href="/">Home</a>
                     <a href="/about">About</a>
 
