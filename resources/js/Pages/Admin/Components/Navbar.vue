@@ -439,7 +439,7 @@
                     </ul>
                     <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
                         <li>
-                            <Link :href="route('logout')" method="post" >
+                            <Link href="/logout" method="post" >
                                 Sign out
                             </Link>
                         </li>
