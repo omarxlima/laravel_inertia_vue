@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { Link } from '@inertiajs/vue3';
+</script>
+
 <template>
 
     <nav
@@ -21,12 +25,18 @@
                     </svg>
                     <span class="sr-only">Toggle sidebar</span>
                 </button>
-                <a href="https://flowbite.com" class="flex items-center justify-between mr-4">
-                    <img src="https://flowbite.s3.amazonaws.com/logo.svg" class="mr-3 h-8" alt="Flowbite Logo" />
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-                </a>
+                <Link :href="route('admin.dashboard')" class="flex items-center justify-between mr-4">
+                    <!-- imagem logo -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="mr-3 h-8" alt="InovaTech Logo">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z" />
+                </svg>
+
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">InovaTech</span>
+                </Link>
                 <form action="#" method="GET" class="hidden md:block md:pl-2">
-                    <label for="topbar-search" class="sr-only">Search</label>
+                    <label for="topbar-search" class="sr-only">Procurar</label>
                     <div class="relative md:w-64 md:w-96">
                         <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                             <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
@@ -439,8 +449,8 @@
                     </ul>
                     <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
                         <li>
-                            <Link href="/logout" method="post" >
-                                Sign out
+                            <Link href="/logout" method="post">
+                            Sign out
                             </Link>
                         </li>
                     </ul>
@@ -448,5 +458,5 @@
             </div>
         </div>
     </nav>
-    
+
 </template>
